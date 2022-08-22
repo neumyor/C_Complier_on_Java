@@ -117,7 +117,6 @@ public class Converter {
     private Datatype BType(Node syn) {
         ArrayList<Node> cs = syn.getChildren();
         int i = 0;
-        // #TODO 无需特殊处理，因为只有int，而且不涉及错误处理，如果错误处理有需求再改吧
         return new IntType();
     }
 

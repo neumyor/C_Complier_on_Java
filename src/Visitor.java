@@ -105,7 +105,6 @@ public class Visitor {
     private BasicType BType(Node syn) {
         ArrayList<Node> cs = syn.getChildren();
         int i = 0;
-        // #TODO 无需特殊处理，因为只有int，而且不涉及错误处理，如果错误处理有需求再改吧
         return BasicType.INT;
     }
 
@@ -444,7 +443,7 @@ public class Visitor {
         int i = 0;
 
         if (ckLfN(export(cs, i), SYMBOL.IFTK)) {
-            symbolTable.addOneBlock(BlockType.IF_BLOCK); // #TODO 这里这个BLOCK加得合理吗？
+            symbolTable.addOneBlock(BlockType.IF_BLOCK);
             i += 2; // if and (
             Cond(export(cs, i++));
 
@@ -459,7 +458,7 @@ public class Visitor {
                 symbolTable.exitPresentBlock();
             }
         } else if (ckLfN(export(cs, i), SYMBOL.WHILETK)) {
-            symbolTable.addOneBlock(BlockType.WHILE_BLOCK); // #TODO 这里这个BLOCK加得合理吗？
+            symbolTable.addOneBlock(BlockType.WHILE_BLOCK);
             i += 2; // while and (
             Cond(export(cs, i++));
 

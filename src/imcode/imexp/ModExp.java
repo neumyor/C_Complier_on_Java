@@ -10,9 +10,6 @@ import symbolstruct.CodeText;
 import symbolstruct.entries.ConstValueEntry;
 import symbolstruct.entries.Entry;
 
-/**
- * TODO 求模优化
- */
 public class ModExp extends IMExp {
     protected ModExp(IMItem item1, IMItem item2, IMItem item3) {
         assert item1 instanceof VarItem;

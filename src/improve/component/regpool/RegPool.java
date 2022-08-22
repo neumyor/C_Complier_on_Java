@@ -40,7 +40,6 @@ public class RegPool {
     }
 
     public String allocTmpReg() {
-         // #TODO 指令之间需要临时寄存器时怎么办？
         return "$fp";
     }
 

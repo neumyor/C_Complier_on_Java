@@ -11,9 +11,6 @@ import symbolstruct.CodeText;
 import symbolstruct.entries.ConstValueEntry;
 import symbolstruct.entries.Entry;
 
-/**
- * #TODO 除法优化
- */
 public class DivExp extends IMExp {
     protected DivExp(IMItem item1, IMItem item2, IMItem item3) {
         assert item1 instanceof VarItem;
